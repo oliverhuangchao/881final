@@ -8,13 +8,10 @@
 				$("#btn1").click(
 					function(){
 						var inputContent = $("#inputword").val();
-						//htmlobj=$.ajax({url:"searchResult.php",async:false});
 						htmlobj=$.ajax({url:"searchResult.php?Ori_String="+inputContent,async:false});
 						var jsonval = htmlobj.responseText;
-						//
 						var jsonArrayFinal = JSON.stringify(jsonval);
 						var obj = $.parseJSON(jsonArrayFinal);
-						//var obj = $.parseJSON('[["1","aaaaaa","1"],["2","bbbbbbb","2"],["3","ccccccc","3"]]')
 
 						$("#result_part").html(jsonval);
 					}
