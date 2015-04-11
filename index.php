@@ -3,7 +3,7 @@
 	<title>Chao's search engine</title>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript">
-		$(document).ready(
+		/*$(document).ready(
 			function(){
 				$("#btn1").click(
 					function(){
@@ -17,18 +17,22 @@
 					}
 				);
 			}
-		);
+		);*/
 	</script>
 </head>
 <body>
-
-
-<input type="text" id="inputword" name="Ori_String">Please input you search word</input>
-<p></p>
-<input type="button" id="btn1" value="do search"></input>
-<p></p>
+<?php 
+	//include "info.php";
+	//include "searchResult.php";
+?>
+<form action="searchResult.php" method="GET">
+	<input type="text" id="inputword" name="Ori_String">Please input you search word</input>
+	<p></p>
+	<input type="submit" id="btn1" value="do search"></input>
+	<p></p>
+</form>
 <!-- result part -->
-<div id="result_part"><h2>111</h2></div>
+<div id="result_part"><h2></h2></div>
 
 <table>
 	<tr>
