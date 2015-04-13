@@ -25,7 +25,7 @@
 	//include "info.php";
 	//include "searchResult.php";
 ?>
-<form action="searchResult.php" method="GET">
+<form action="remotesearch.php" method="GET">
 	<input type="text" id="inputword" name="Ori_String">Please input you search word</input>
 	<p></p>
 	<input type="submit" id="btn1" value="do search"></input>
