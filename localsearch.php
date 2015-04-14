@@ -24,7 +24,7 @@
 	$remote = fopen("ssh2.sftp://$sftp/home/chaoh/Documents/hadoop/hadoop-1.2.1/input/doc_detail.xml", 'rb');
 	
 	
-	$local = fopen('/home/chaoh/aaa.xml', 'w');
+	$local = fopen('/home/chaoh/Documents/881/website/test.xml', 'w');
 
 
 	while(!feof($remote)){
@@ -34,4 +34,6 @@
 	fclose($local);
 
 	fclose($remote);
+
+	include 'xmlParse.php';
 ?>
