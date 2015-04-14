@@ -1,5 +1,4 @@
 <?php
-	//include the basic information
 	include 'info.php';
 	
 	//get old string
