@@ -13,7 +13,6 @@
 	//$stream = ssh2_exec($connection, "cp \$HADOOP_HOME/copy_search.sh \$HADOOP_HOME/search.sh");
 	//$stream = ssh2_exec($connection, "perl -pi -e 's/&&&searchword&&&/$input/g' \$HADOOP_HOME/search.sh");
 
-
 	$stream = ssh2_exec($connection, "\$HADOOP_HOME/search.sh");
 
 	sleep(5);

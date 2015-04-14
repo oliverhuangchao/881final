@@ -2,7 +2,6 @@
 //libxml_disable_entity_loader(false);
 ini_set ('display_errors', true);
 error_reporting (E_ALL | E_STRICT);
-
 $dom = new DOMDocument();
 $dom->load("test.xml");
 /*
@@ -26,6 +25,8 @@ if ($p->hasChildNodes()) {
 return false;
 }
 */
+$titleArray = array();
+$count = 0;
 $xpath = new DOMXPath($dom);
 $elements = $xpath->query("/docs/pp");
 if(!is_null($elements)) {
@@ -35,11 +36,12 @@ if(!is_null($elements)) {
     $nodes = $element->childNodes;
     foreach ($nodes as $node) {
     	if ($node->nodeName == "title"){
-      		echo $node->nodeValue.'<br>';
-      		}
-
+      		//echo $node->nodeValue.'<br>';
+          $titleArray[$count] = $node->nodeValue;
+          $count = $count + 1;
+      }
     }
   }
 }
-
+//print_r($titleArray);
 ?>
