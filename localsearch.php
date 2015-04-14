@@ -20,8 +20,6 @@
 
 	//return result
 	$sftp = ssh2_sftp($connection);
-
-	//$remote = fopen("ssh2.sftp://$sftp/home/chaoh/software/hadoop-1.2.1/final_output/doc_detail.xml", 'rb');
 	
 	$remote = fopen("ssh2.sftp://$sftp/home/chaoh/Documents/hadoop/hadoop-1.2.1/input/doc_detail.xml", 'rb');
 	
