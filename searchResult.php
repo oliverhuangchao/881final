@@ -11,7 +11,8 @@
 	$input = $_GET['Ori_String'];
 	$page = 1;
 	// run the hadoop in the backend
-	include 'localsearch.php';
+	//include 'localsearch.php';
+	include 'remotesearch.php';
 ?>
 <body>
 <div id="wrapper">
@@ -23,7 +24,7 @@
 		</div>
 		<!-- end #menu -->
 		<div id="search">
-			<form method="get" action="remotesearch.php">
+			<form method="get" action="000.php">
 				<fieldset>
 				<input type="text" name="Ori_String" id="inputword" size="15" />
 				<input type="submit" id="btn1" value="do search" />

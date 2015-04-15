@@ -17,15 +17,14 @@
 	$stream = ssh2_exec($connection, "ssh $hostNode");
 	
 	//copy the old file
-	$stream = ssh2_exec($connection, "cp \$HADOOP_HOME/demo/copy_search.sh \$HADOOP_HOME/demo/search.sh");
-	$stream = ssh2_exec($connection, "perl -pi -e 's/&&&search_word&&&/$input/g' \$HADOOP_HOME/demo/search.sh");
+	$stream = ssh2_exec($connection, "cp \$HADOOP_HOME/demo/copy_search_next.sh \$HADOOP_HOME/demo/search.sh");
 	$stream = ssh2_exec($connection, "perl -pi -e 's/&&&search_page&&&/$page/g' \$HADOOP_HOME/demo/search.sh");
 
 	// do the search
 	$stream = ssh2_exec($connection, "\$HADOOP_HOME/demo/search.sh");
 	
 	// it shoudl wait for some time
-	sleep(10);
+	sleep(3);
 
 	
 	$sftp = ssh2_sftp($connection);

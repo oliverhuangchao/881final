@@ -2,7 +2,7 @@
 	$input = $_GET['Ori_String'];
 	$page =  $_GET['PageNumber'];
 	// run the hadoop in the backend
-	include 'search_next_page.php';
+	include 'search_next_page_remote.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,7 +24,7 @@
 		</div>
 		<!-- end #menu -->
 		<div id="search">
-			<form method="get" action="remotesearch.php">
+			<form method="get" action="000.php">
 				<fieldset>
 				<input type="text" name="Ori_String" id="inputword" size="15" />
 				<input type="submit" id="btn1" value="do search" />
