@@ -8,6 +8,9 @@
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <?php 
+	$input = $_GET['Ori_String'];
+	$page = 1;
+	// run the hadoop in the backend
 	include 'localsearch.php';
 ?>
 <body>
@@ -32,6 +35,14 @@
 	<!-- end #header -->
 	
 <!-- end #header-wrapper -->
+
+
+<form action = "nextpage.php" method="GET">
+	<input type="hidden" name="Ori_String"  value="<?php echo $input;  ?>"></input>
+	<input type="hidden" name="PageNumber"  value="<?php echo $page+1; ?>"></input>
+	<input type = "submit" value ="next"></input>
+</form>
+
 
 <div id="page">
 	<div id="content">
